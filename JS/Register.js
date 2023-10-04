@@ -1,13 +1,19 @@
 function register(e) {
     e.preventDefault();
 
-    var nom = document.getElementById("nom") ;
-    var prenom = document.getElementById("prénom") ;
-    var email = document.getElementById("email") ;
-    var password = document.getElementById("password") ;
-    var confirmpassword = document.getElementById("confirm") ;
+    var nom = document.getElementById("nom");
+    var prenom = document.getElementById("prénom");
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    var confirmpassword = document.getElementById("confirm");
     var formValid = true;
-  
+
+    var user = {
+        nom: nom.value,
+        prenom: prenom.value,
+        email: email.value,
+        password: password.value,
+    }
 
     if (nom.value == "") {
         nom.classList.remove("is-valid");
@@ -58,7 +64,7 @@ function register(e) {
         confirmpassword.classList.add("is-valid");
         formValid = true;
     }
-   
+
 }
 var btnregister = document.getElementById("submit")
-btnregister.addEventListener("click" , register)
+btnregister.addEventListener("click", register)
