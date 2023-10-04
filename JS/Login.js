@@ -1,8 +1,8 @@
 function login(e) {
     e.preventDefault();
-    
-    var email = document.getElementById("email") ;
-    var password = document.getElementById("password") ;
+
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
     var formValid = true;
 
     if (email.value == "") {
@@ -24,6 +24,22 @@ function login(e) {
         password.classList.add("is-valid");
         formValid = true;
     }
+    var user = {
+        email: email.value,
+        password: password.value
+    }
+
+    var users = JSON.parse(localStorage.getItem("users")) || [] /// get element from localstorage
+    var trouve = users.find((user) => user.email == email.value && user.password == password.value)
+    if (trouve != undefined) {
+        alert('connected')
+        window.location.href="./dasboard.html"
+
+    } else {
+        alert('vérifier email and password')
+
+    }
+
 }
-    var btnregister = document.getElementById("submit");
-    btnregister.addEventListener("click", login);
+var btnlogin = document.getElementById("loginbtn");
+btnlogin.addEventListener("click", login);

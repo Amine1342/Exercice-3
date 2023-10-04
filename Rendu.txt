@@ -1,0 +1,8 @@
+une application de gestion de produit CRUD LocalStorage
+Create product 
+Read Product (((MAp)))
+delete product 
+update Product 
+
+product : nom , description , Reference , Prix , Quantity
+

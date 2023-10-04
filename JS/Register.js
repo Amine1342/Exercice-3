@@ -8,12 +8,8 @@ function register(e) {
     var confirmpassword = document.getElementById("confirm");
     var formValid = true;
 
-    var user = {
-        nom: nom.value,
-        prenom: prenom.value,
-        email: email.value,
-        password: password.value,
-    }
+
+    
 
     if (nom.value == "") {
         nom.classList.remove("is-valid");
@@ -64,7 +60,25 @@ function register(e) {
         confirmpassword.classList.add("is-valid");
         formValid = true;
     }
+    var user = {
+        nom: nom.value,
+        prenom: prenom.value,
+        email: email.value,
+        password: password.value,
+    }
 
+
+    if (formValid) {
+        var users = JSON.parse(localStorage.getItem("users")) || [] /// get element from localstorage
+        users.push(user) ///add dans le tableau
+        localStorage.setItem("users" , JSON.stringify(users)) //add dans localstorage
+        window.location.href ="login.html"
+    }
+    else{
+        alert('vérifier donnée')
+    }
 }
 var btnregister = document.getElementById("submit")
 btnregister.addEventListener("click", register)
+
+
