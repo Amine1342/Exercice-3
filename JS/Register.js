@@ -1,6 +1,9 @@
+// Ajouter un utilisateur //
 function register(e) {
+    // Empecher le refresh de la page en cliquant sur le bouton //
     e.preventDefault();
 
+    // Récupérer les valeurs des inputs //
     var nom = document.getElementById("nom");
     var prenom = document.getElementById("prénom");
     var email = document.getElementById("email");
@@ -8,9 +11,7 @@ function register(e) {
     var confirmpassword = document.getElementById("confirm");
     var formValid = true;
 
-
-    
-
+    // Vérifier les valeurs des inputs //
     if (nom.value == "") {
         nom.classList.remove("is-valid");
         nom.classList.add("is-invalid");
@@ -67,17 +68,19 @@ function register(e) {
         password: password.value,
     }
 
-
+    // Ajouter un utilisateur au localStorage //
     if (formValid) {
         var users = JSON.parse(localStorage.getItem("users")) || [] /// get element from localstorage
         users.push(user) ///add dans le tableau
-        localStorage.setItem("users" , JSON.stringify(users)) //add dans localstorage
-        window.location.href ="login.html"
+        localStorage.setItem("users", JSON.stringify(users)) //add dans localstorage
+        window.location.href = "login.html"
     }
-    else{
+    else {
         alert('vérifier donnée')
     }
 }
+
+// Ajouter un utilisateur avec le bouton //
 var btnregister = document.getElementById("submit")
 btnregister.addEventListener("click", register)
 

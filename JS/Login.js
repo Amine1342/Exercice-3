@@ -5,6 +5,7 @@ function login(e) {
     var password = document.getElementById("password");
     var formValid = true;
 
+    // Vérifier les valeurs des inputs //
     if (email.value == "") {
         email.classList.remove("is-valid");
         email.classList.add("is-invalid");
@@ -24,11 +25,13 @@ function login(e) {
         password.classList.add("is-valid");
         formValid = true;
     }
+
     var user = {
         email: email.value,
         password: password.value
     }
 
+    // Compare this snippet from JS/Register.js:
     var users = JSON.parse(localStorage.getItem("users")) || [] /// get element from localstorage
     var trouve = users.find((user) => user.email == email.value && user.password == password.value)
     if (trouve != undefined) {
