@@ -32,11 +32,9 @@ function login(e) {
     var users = JSON.parse(localStorage.getItem("users")) || [] /// get element from localstorage
     var trouve = users.find((user) => user.email == email.value && user.password == password.value)
     if (trouve != undefined) {
-        alert('connected')
         window.location.href="./dasboard.html"
-
     } else {
-        alert('vérifier email and password')
+        alert('Vérifier email et mot de passe')
 
     }
 

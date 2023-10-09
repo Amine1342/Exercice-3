@@ -22,9 +22,12 @@
   </head>
 
   <body>
+    <!-- Navbar bootstrap -->
     <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="Dashbord.html"
+          ><strong class="text-danger">Welcome</strong></a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -43,32 +46,36 @@
                 class="nav-link active"
                 aria-current="page"
                 href="Dashbord.html"
-                >Home</a
+              >
+                <strong class="text-primary">Nos produits</strong></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/AddProduct.html">Ajouter Produit</a>
+              <a class="nav-link" href="/AddProduct.html">
+                <strong class="text-primary">Ajouter Produit</strong></a
+              >
             </li>
           </ul>
+
+          <!-- Boutons -->
           <form class="d-flex" role="search">
             <a
               href="/register.html"
-              class="m-2 btn btn-outline-success"
+              class="btn btn-outline-success"
               type="submit"
-            >
-              register
+              ><strong>Register</strong>
             </a>
-            <a
-              href="/login.html"
-              class="m-2 btn btn-outline-success"
-              type="submit"
-            >
-              login
+            <span class="mx-2"></span>
+            <a href="/login.html" class="btn btn-outline-success" type="submit"
+              ><strong>Login</strong>
             </a>
           </form>
+
+          <!-- Fin Formulaire -->
         </div>
       </div>
     </nav>
+    <!-- Fin Navbar bootstrap -->
     <div
       class="container d-flex align-items-center justify-content-center vh-100"
     >

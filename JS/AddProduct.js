@@ -68,12 +68,12 @@ function addProduct(e) {
     };
 
     if (formValid) {
-        var products = JSON.parse(localStorage.getItem("products")) || []; /// get element from localstorage
-        products.push(product); ///add dans le tableau
-        localStorage.setItem("products", JSON.stringify(products)); //add dans localstorage
-        window.location.href = "login.html";
+        var products = JSON.parse(localStorage.getItem("products")) || []; // Chercher l'élément dans le localstorage
+        products.push(product); // Ajouter au tableau
+        localStorage.setItem("products", JSON.stringify(products)); //Ajouer au localstorage
+        window.location.href = "dashbord.html"; // Redirection
     } else {
-        alert("vérifier donnée");
+        alert("vérifier données");
     }
 }
 var btnaddProduct = document.getElementById("submit");

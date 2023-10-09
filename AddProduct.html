@@ -17,9 +17,10 @@
 </head>
 
 <body>
+    <!-- Navbar bootstrap -->
     <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Dashbord.html"><strong class="text-danger">Welcome</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -28,28 +29,34 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="Dashbord.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="Dashbord.html">
+                            <strong class="text-primary">Nos produits</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/AddProduct.html">Ajouter Produit</a>
+                        <a class="nav-link" href="/AddProduct.html">
+                            <strong class="text-primary">Ajouter Produit</strong></a>
                     </li>
-
-
                 </ul>
-                <form class="d-flex" role="search">
 
-                    <a href="/register.html" class="btn btn-outline-success" type="submit">
-                        register
+                <!-- Boutons -->
+                <form class="d-flex" role="search">
+                    <a href="/register.html" class="btn btn-outline-success" type="submit"><strong>Register</strong>
                     </a>
-                    <a href="/login.html" class="btn btn-outline-success" type="submit">
-                        login
+                    <span class="mx-2"></span>
+                    <a href="/login.html" class="btn btn-outline-success" type="submit"><strong>Login</strong>
                     </a>
                 </form>
+
+                <!-- Fin Formulaire -->
             </div>
         </div>
     </nav>
+    <!-- Fin Navbar bootstrap -->
+
+    <!-- Formulaire -->
     <div class="container d-flex align-items-center justify-content-center vh-100">
         <div class="col-md-6">
+            <!-- Titre-->
             <h1 class="text-center mb-4 text-primary">Ajoutez votre produit</h1>
             <form>
                 <div class="form-group mb-3">
@@ -103,6 +110,7 @@
             </form>
         </div>
     </div>
+
     <script src="JS/AddProduct.js"></script>
 </body>
 
